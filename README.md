@@ -250,3 +250,23 @@ fileUploadSchema.post("save", async function (doc) {
 - The email includes information such as the sender's address, recipient's address (retrieved from the saved document's email field), subject, and content (both plain text and HTML).
 - The HTML content includes a message ("Hello cloudinary image uploaded") and a link to view the uploaded image on Cloudinary.
 - Catches any errors that might occur during the process of sending the email and logs the error to the console.
+
+
+## must add .env file
+
+env file data
+
+MONGO_URL =  
+
+PORT = 
+
+CLOUD_NAME =  
+
+API_KEY =  
+
+API_SECRET = 
+
+
+MAIL_HOST =  
+MAIL_USER =  
+MAIL_PASSWORD = 
