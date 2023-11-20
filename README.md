@@ -1,17 +1,16 @@
 # File Upload
 
 ## what the project does?
-
-- take data from cleint and store on server(localUpload controller and http://localhost:3000/api/v1/upload/localUpload)
+This project integrates Cloudinary for file uploads, MongoDB for database storage, and incorporates an email notification system. 
 
 Created a starter code like setup index.js, models, routes, controllers,models and config(in config database.js is for connection to database to server and cloudinary is for connecting cloudinary to server)
 
 for file uploading i am using express-fileupload middleware
 
 ### localUpload (http://localhost:3000/api/v1/upload/localUpload)
+(take data from client and store on server(localUpload controller and http://localhost:3000/api/v1/upload/localUpload))
 
-This code defines a function called localUpload for handling file uploads on the server. Here's a simplified breakdown:
-
+This code defines a function called localUpload for handling file uploads on the server.  
 Fetch File:
 
 Extracts the uploaded file from the incoming request.
@@ -34,7 +33,7 @@ In simpler terms, this code is a server-side function to handle uploading files,
 
 ### imageUpload to Cloudinary and save entry to database(http://localhost:3000/api/v1/upload/imageUpload)
 
-````
+```
 async function uploadFileToCloudinary(file, folder, quality) {
   const options = { folder };
   if (quality) {
@@ -44,6 +43,7 @@ async function uploadFileToCloudinary(file, folder, quality) {
   return await cloudinary.uploader.upload(file.tempFilePath, options);
 }
 ```
+
 
 This function uploads a file to clodinary
 - folder is in which folder in cloudinary i want to store file
@@ -135,7 +135,6 @@ catch (error) {
 ```
 - Catches any errors that might occur during the process and responds with a failure message and status if an error occurs.
 
-````
 
 ### videoUpload to Cloudinary and save entry to database(http://localhost:3000/api/v1/upload/videoUpload)
 
